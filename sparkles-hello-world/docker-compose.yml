@@ -1,14 +1,21 @@
 version: "3.7"
 
 services:
-
-  app_proxy:
-    environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
-      APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+  portracker:
+    image: mostafawahied/portracker:latest
+    container_name: portracker
+    restart: unless-stopped
+    pid: "host"  # Required for port detection
+    # Required permissions for system ports service namespace access
+    cap_add:
+      - SYS_PTRACE     # Linux hosts: read other PIDs' /proc entries
+      - SYS_ADMIN      # Docker Desktop: allow namespace access for host ports (required for MacOS)
+    security_opt:
+      - apparmor:unconfined # Required for system ports
+    volumes:
+      # Required for data persistence
+      - ./portracker-data:/data
+      # Required for discovering services running in Docker
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - "4999:4999"
