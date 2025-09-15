@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: donetick-app
+name: donetick
+tagline: Simplify Tasks & Chores, Together!
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/donetick.svg
+category: Productivity
+version: "1.0.0"
+port: 4000
+description: >-
+  Donetick is an open-source, user-friendly app designed to help you organize tasks and chores effectively. featuring customizable options to help you and others stay organized
+
+developer: Mohamad Tarbin
+website: https://donetick.com/
+submitter: Jonathon Smyth
+submission: https://github.com/JSmyth886/umbrel-personal-app-store/
+repo: https://github.com/JSmyth886/umbrel-personal-app-store/
+support: https://github.com/JSmyth886/umbrel-personal-app-store/issues
+gallery:
+  - https://i.postimg.cc/vHcsH0TY/main-light.png
+releaseNotes: >-
+  Initial version of your donetick app.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+
