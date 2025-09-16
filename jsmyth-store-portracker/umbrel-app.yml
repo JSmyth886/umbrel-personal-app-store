@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: portracker-app
+id: jsmyth-store-portracker
 name: Portracker
 tagline: A self-hosted, real-time port monitoring and discovery tool.
 icon: https://raw.githubusercontent.com/donetick/donetick/refs/heads/main/assets/screenshot.png
