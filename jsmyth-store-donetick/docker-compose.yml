@@ -9,8 +9,8 @@ donetick:
     ports:
       - 2021:2021
     volumes:
-      - ./data:/donetick-data
-      - ./config:/config
+      - ${APP_DATA_DIR}/donetick/data:/donetick-data
+      - ${APP_DATA_DIR}/donetick/config:/config
     environment:
       - DT_ENV=selfhosted
       - DT_SQLITE_PATH=/donetick-data/donetick.db

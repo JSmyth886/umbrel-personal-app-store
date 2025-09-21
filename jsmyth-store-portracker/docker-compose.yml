@@ -14,7 +14,7 @@ services:
       - apparmor:unconfined # Required for system ports
     volumes:
       # Required for data persistence
-      - ./portracker-data:/data
+      - ${APP_DATA_DIR}/portracker/data:/data
       # Required for discovering services running in Docker
       - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
